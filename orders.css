@@ -1,0 +1,65 @@
+.orders-page{
+
+    max-width:1100px;
+    margin:60px auto;
+    padding:20px;
+
+}
+
+.orders-page h1{
+
+    text-align:center;
+    color:#7d5a83;
+    margin-bottom:10px;
+
+}
+
+.orders-page p{
+
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+
+}
+
+#orders-container{
+
+    display:grid;
+    gap:25px;
+
+}
+
+.order-card{
+
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.order-card img{
+
+    width:90px;
+    border-radius:12px;
+    margin-bottom:15px;
+
+}
+
+.order-card h3{
+
+    color:#7d5a83;
+    margin-bottom:10px;
+
+}
+
+.status{
+
+    display:inline-block;
+    background:#C5B3D3;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    margin-top:10px;
+
+}

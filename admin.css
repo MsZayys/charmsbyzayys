@@ -1,0 +1,246 @@
+body{
+    margin:0;
+    padding:30px;
+    font-family:'Poppins',sans-serif;
+    background:#FBEFEF;
+}
+
+.admin-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.admin-container h1{
+    text-align:center;
+    color:#7d5a83;
+    margin-bottom:40px;
+}
+
+#orders-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.order-card{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.order-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.order-card h3{
+    color:#7d5a83;
+    margin-bottom:10px;
+}
+
+.order-card p{
+    margin:8px 0;
+    color:#555;
+}
+
+.status{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    border-radius:30px;
+    background:#FFF4C2;
+    color:#9A6B00;
+    font-weight:600;
+}
+
+.btn-group{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.btn-group button{
+    flex:1;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.ship-btn{
+    background:#7d5a83;
+    color:white;
+}
+
+.ship-btn:hover{
+    background:#65486a;
+}
+
+.deliver-btn{
+    background:#46b96d;
+    color:white;
+}
+
+.deliver-btn:hover{
+    background:#359658;
+}
+
+.delete-btn{
+    background:#e74c3c;
+    color:white;
+}
+
+.delete-btn:hover{
+    background:#c0392b;
+}
+/* ================= ADD PRODUCT ================= */
+
+.add-product{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:40px;
+
+}
+
+.add-product h2{
+
+    text-align:center;
+
+    color:#7d5a83;
+
+    margin-bottom:25px;
+
+}
+
+.add-product input,
+.add-product textarea{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    margin-bottom:16px;
+
+    border:1px solid #e7d7e4;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-family:Poppins,sans-serif;
+
+    outline:none;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+
+}
+
+.add-product input:focus,
+.add-product textarea:focus{
+
+    border-color:#c89cc5;
+
+}
+
+.add-product textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+#add-product-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#7d5a83;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#add-product-btn:hover{
+
+    background:#68456d;
+
+}
+/* ================= MANAGE PRODUCTS ================= */
+
+#products-list {
+    margin-top: 25px;
+}
+
+.product-card-admin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.product-card-admin img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card-admin h3 {
+    margin: 0;
+    color: #7d5a83;
+}
+
+.product-card-admin p {
+    margin: 4px 0;
+    color: #666;
+}
+
+.delete-product-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.delete-product-btn:hover {
+    background: #d63031;
+}

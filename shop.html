@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <title>Shop | Charms by Zayys</title>
+
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Shop CSS -->
+    <link rel="stylesheet" href="shop.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+    <div class="left">
+        💜 Handmade with Love
+    </div>
+
+    <div class="center">
+        🚚 Free Delivery on Orders Above Rs.2000
+    </div>
+
+    <div class="right">
+
+        <span>Follow Us</span>
+
+        <a href="https://www.tiktok.com/@ms.zayys" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <h1>Charms</h1>
+
+        <span>by Zayys</span>
+
+    </div>
+ <div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="shop.html">Shop</a></li>
+
+        
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="reviews.html">Reviews</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+    <div class="icons">
+
+        
+
+         <div class="cart-icon">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+</div>
+
+        <div id="user-area">
+
+    <a href="login.html" id="login-link">
+
+        <i class="fa-regular fa-circle-user"></i>
+
+        Login
+
+    </a>
+
+    <div id="user-menu" style="display:none;">
+
+        <div id="user-trigger">
+
+            <div id="user-avatar">Z</div>
+
+            <span id="user-display-name"></span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </div>
+
+        <div id="user-dropdown">
+
+            <a href="account.html">
+                <i class="fa-regular fa-user"></i>
+                My Account
+            </a>
+
+            <a href="wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                Wishlist
+            </a>
+
+            <a href="orders.html">
+                <i class="fa-solid fa-box"></i>
+                My Orders
+            </a>
+            <a href="admin.html" id="admin-link" style="display:none;">
+                 <i class="fa-solid fa-user-shield"></i>
+                   Admin Panel
+            </a>
+
+            <button id="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</nav>
+
+<!-- ================= SHOP HERO ================= -->
+
+<section class="shop-hero">
+
+    <h1>✨ Shop Our Collection ✨</h1>
+
+    <p>
+        Handmade bracelets made with love, elegance and a little bit of magic 💜
+    </p>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+    <input
+        type="text"
+        placeholder="🔍 Search your favorite bracelet...">
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+    <button class="category-btn active" data-category="all">
+        💖 All
+    </button>
+
+    <button class="category-btn" data-category="Cute">
+        🌸 Cute
+    </button>
+
+    <button class="category-btn" data-category="Butterfly">
+        🦋 Butterfly
+    </button>
+
+    <button class="category-btn" data-category="Pearl">
+        🤍 Pearl
+    </button>
+
+    <button class="category-btn" data-category="Crystal">
+        ✨ Crystal
+    </button>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products-container">
+
+</section>
+
+<!-- BACK TO HOME -->
+
+<div class="back-home">
+
+    <a href="index.html">
+        🏠 Back to Home
+    </a>
+
+</div>
+
+<!-- PRODUCT POPUP -->
+
+<div class="product-popup" id="productPopup">
+
+    <div class="popup-box">
+
+        <span class="close-popup">&times;</span>
+
+        <img id="popup-image" src="" alt="">
+
+        <div class="popup-content">
+
+            <h2 id="popup-title"></h2>
+
+            <div class="popup-rating">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <h3 id="popup-price"></h3>
+
+            <p id="popup-description"></p>
+
+            <p class="stock">
+                📦 In Stock
+            </p>
+
+            <div class="qty-box">
+
+                <button id="minusQty">−</button>
+
+                <span id="qty">1</span>
+
+                <button id="plusQty">+</button>
+
+            </div>
+
+            <div class="popup-buttons">
+
+                <button id="popupAddCart">🛒 Add to Cart</button>
+
+                <button id="buyNow">⚡ Buy Now</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+
+            <h2>Charms</h2>
+
+            <span>by Zayys</span>
+
+            <p>
+                ✨ Tiny Charms, Endless Smiles ✨
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="about.html">About</a>
+
+            <a href="reviews.html">Reviews</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                mszayys@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-brands fa-tiktok"></i>
+                @charmsbyzayys
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Pakistan
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 Charms by Zayys • All Rights Reserved 💜
+
+    </div>
+
+</footer>
+
+<script type="module" src="shop.js"></script>
+<script type="module" src="auth.js"></script>
+<script type="module" src="script.js"></script>
+</body>
+</html>
