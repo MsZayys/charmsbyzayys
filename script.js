@@ -280,7 +280,9 @@ async function loadFeaturedProducts() {
 
       <div class="product-card">
 
-       <span class="badge">New</span>
+       <span class="badge ${product.status === "None" ? "hidden" : ""}">
+    ${product.status || "New"}
+</span>
 
        <div class="wishlist">
         <i class="fa-regular fa-heart"></i>

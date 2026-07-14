@@ -145,6 +145,7 @@ if (productForm) {
         const price = document.getElementById("product-price").value;
         const image = document.getElementById("product-image").value;
         const category = document.getElementById("product-category").value;
+        const status = document.getElementById("product-status").value;
         const description = document.getElementById("product-description").value;
 
         try {
@@ -155,6 +156,7 @@ if (productForm) {
                 price,
                 image,
                 category,
+                status,
                 description,
                 createdAt: serverTimestamp()
 
@@ -201,7 +203,7 @@ async function loadProducts() {
                 <p>Rs. ${product.price}</p>
 
                 <p>${product.category}</p>
-
+                <p><strong>Status:</strong> ${product.status || "New"}</p>
             </div>
 
             <button
