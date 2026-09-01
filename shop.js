@@ -14,27 +14,41 @@ if (cartCount) {
 }
 
 
-// ===== Product Search =====
+// ===== Product Search & Category Filter =====
 
 const searchInput = document.querySelector(".search-section input");
-function getProducts() {
-    return document.querySelectorAll(".product-card");
-}
 
-searchInput.addEventListener("keyup", function () {
+let selectedCategory = "all";
 
-    let searchValue = searchInput.value.toLowerCase();
+function filterProducts() {
 
-    getProducts().forEach(function(product){
+    const searchValue = searchInput.value.toLowerCase().trim();
 
+    getProducts().forEach(product => {
 
-        let productName = product.querySelector("h3").textContent.toLowerCase();
+        const productName =
+            product.querySelector("h3").textContent.toLowerCase();
 
-        if(productName.includes(searchValue)){
+        const productCategory =
+            product.dataset.category.toLowerCase();
+
+        const productDescription =
+            product.querySelector(".product-description").textContent.toLowerCase();
+
+        const matchesSearch =
+            productName.includes(searchValue) ||
+            productCategory.includes(searchValue) ||
+            productDescription.includes(searchValue);
+
+        const matchesCategory =
+            selectedCategory === "all" ||
+            productCategory === selectedCategory.toLowerCase();
+
+        if (matchesSearch && matchesCategory) {
 
             product.style.display = "";
 
-        }else{
+        } else {
 
             product.style.display = "none";
 
@@ -42,7 +56,19 @@ searchInput.addEventListener("keyup", function () {
 
     });
 
-});
+}
+
+function getProducts() {
+
+    return document.querySelectorAll(".product-card");
+
+}
+
+if (searchInput) {
+
+    searchInput.addEventListener("keyup", filterProducts);
+
+}
 // ================= OPEN CART =================
 
 const cartIcon = document.querySelector(".cart-icon");
@@ -338,30 +364,15 @@ categoryButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        // Active button update
-        categoryButtons.forEach(btn => btn.classList.remove("active"));
+        categoryButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
         button.classList.add("active");
 
-        const selectedCategory = button.dataset.category;
+        selectedCategory = button.dataset.category;
 
-        document.querySelectorAll(".product-card").forEach(card => {
-
-            const productCategory = card.dataset.category;
-
-            if (
-                selectedCategory === "all" ||
-                productCategory === selectedCategory
-            ) {
-
-                card.style.display = "";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
+        filterProducts();
 
     });
 
