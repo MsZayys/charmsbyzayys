@@ -4,6 +4,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F8DCE8">
     <link rel="icon" type="image/png" href="images/logo.png">
 
     <title>About | Charms by Zayys</title>
@@ -11,131 +12,470 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Logo Font -->
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Heading Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Body Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <section class="about-page">
+    <!-- ================= TOP BAR ================= -->
 
-        <div class="about-box">
+    <div class="top-bar">
 
-            <h1>✨ About Me ✨</h1>
+        <div class="left">
+            💜 Handmade with Love
+        </div>
+
+        <div class="center">
+            🚚 Free Delivery on Orders Above Rs.2000
+        </div>
+
+        <div class="right">
+
+            <span>Follow Us</span>
+
+            <a href="https://www.tiktok.com/@charmsbyzayys" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <h1>Charms</h1>
+
+        <span>by Zayys</span>
+
+    </div>
+    <div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
+
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="shop.html">Shop</a></li>
+
+        
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="reviews.html">Reviews</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+    <div class="icons">
+
+        
+
+        <div class="cart-icon">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+</div>
+
+        <!-- USER AREA -->
+
+        <div id="user-area">
+
+            <!-- Login Button -->
+
+            <a href="login.html" id="login-link">
+
+                <i class="fa-regular fa-user"></i>
+
+                Login
+
+            </a>
+
+            <!-- User Menu -->
+
+            <div id="user-menu" style="display:none;">
+
+                <div id="user-trigger">
+
+                    <div id="user-avatar">Z</div>
+
+                    <span id="user-display-name"></span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+                <div id="user-dropdown">
+
+                    <a href="account.html">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        My Account
+
+                    </a>
+
+                   <a href="wishlist.html">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                        Wishlist
+
+                    </a>
+
+                   <a href="orders.html">
+
+                        <i class="fa-solid fa-box"></i>
+
+                        My Orders
+
+                    </a>
+                    <a href="admin.html" id="admin-link" style="display:none;">
+                             <i class="fa-solid fa-user-shield"></i>
+                               Admin Panel
+                    </a>
+
+                    <button id="logout-btn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<main>
+
+    <!-- ================= 1. HERO ================= -->
+
+    <section class="ab-hero" data-hearts>
+
+        <span class="ab-float lg" style="top:12%;left:4%;--delay:0s">💗</span>
+        <span class="ab-float sm" style="top:26%;left:44%;--delay:1.2s">✨</span>
+        <span class="ab-float md" style="bottom:14%;left:8%;--delay:2s">✨</span>
+        <span class="ab-float sm" style="top:10%;right:8%;--delay:.6s">💜</span>
+        <span class="ab-float md" style="bottom:10%;right:6%;--delay:1.8s">🌷</span>
+        <span class="ab-float sm" style="bottom:30%;left:46%;--delay:3s">💕</span>
+
+        <div class="ab-hero-text">
+
+            <span class="ab-eyebrow">✨ About Charms by Zayys ✨</span>
+
+            <h1>A Little Story Behind the Charms</h1>
 
             <p>
-    <b>Hi, I am Zay! 💜</b>
+                Hii! 👋🏻✨ I’m Zay, the little creator behind <b>Charms by Zayys</b>.
+                This is my tiny corner of the internet, filled with cute things, pretty colors
+                and little handmade details, made to feel <b>happy, cozy, and a little bit magical.</b> 💜
+            </p>
 
-    <br><br>
+            <div class="ab-hero-actions">
+                <a href="shop.html" class="shop-btn">🛍️ Shop Now</a>
+                <button id="music-btn" class="explore-btn ab-music" type="button">🎵 Play Music</button>
+            </div>
 
-    Hii! 👋🏻✨ I am Zay, the little creator behind <b>Charms by Zayys</b>!
+        </div>
 
-    <br><br>
+        <div class="ab-hero-visual" aria-hidden="true">
 
-    I’m someone who finds happiness in cute things, pretty colors, tiny details, and making things with my own hands. 🌷🎀
+            <div class="ab-orb">
+                <div class="mark">Charms</div>
+                <div class="mark-by">by Zayys</div>
+                <div class="mark-tag">✨ Tiny Charms, Endless Smiles ✨</div>
+            </div>
 
-    <br><br>
-
-    I love creating little pieces that feel <b>happy, cozy, and a little bit magical.</b> ✨
-
-    <br><br>
-
-    I put lots of love, patience, and a tiny piece of my heart into everything I make. 💕
-
-    <br><br>
-
-    Here at <b>Charms by Zayys</b>, you’ll find my little collection of handmade cuties:
-
-    <br><br>
-
-    💎 <b>Jewelry</b> — pretty little pieces for your everyday sparkle.
-
-    <br><br>
-
-    🌸 <b>Cold Porcelain Charms</b> — tiny handmade cuties made with love.
-
-    <br><br>
-
-    🧸 <b>Soft Toys</b> — squishy little friends to brighten your day.
-
-    <br><br>
-
-    🌷 <b>Crochet Bouquets</b> — cute flowers made to stay forever.
-
-    <br><br>
-
-    🧶 <b>Crochet Creations</b> — cozy little handmade treasures.
-
-    <br><br>
-
-    📱 <b>Phone Charms</b> — tiny cuties for your favorite things.
-
-    <br><br>
-
-    👜 <b>Bag Charms</b> — because bags deserve a little cuteness too!
-
-    <br><br>
-
-    🔑 <b>Keychains</b> — little buddies you can take everywhere.
-
-    <br><br>
-
-    🎁 <b>Gift Boxes</b> — a bundle of little happy things for someone special.
-
-    <br><br>
-
-    And who knows... there might be <b>lots more cute things coming soon!</b> 👀🎀
-
-    <br><br>
-
-    <b>Thank you for visiting my little corner of the internet.</b>
-
-    <br><br>
-
-    I hope something here makes you smile. 🥹💜✨
-</p>
-            <br>
-
-            <button id="music-btn" class="shop-btn">
-                🎵 Play Music
-            </button>
-
-            <br><br>
-
-            <a href="index.html" class="shop-btn">
-                🏠 Back to Home
-            </a>
+            <span class="ab-badge b1">💎 Jewelry</span>
+            <span class="ab-badge b2">🌷 Crochet Bouquets</span>
+            <span class="ab-badge b3">🧸 Soft Toys</span>
 
         </div>
 
     </section>
 
-    <audio id="bg-music" loop>
-        <source src="music/song.mp3" type="audio/mpeg">
-    </audio>
+    <!-- ================= 2. OUR STORY ================= -->
 
-    <script>
-        const music = document.getElementById("bg-music");
-        const btn = document.getElementById("music-btn");
+    <section class="ab-section" id="our-story">
 
-        btn.onclick = function () {
+        <span class="ab-eyebrow" data-reveal>Our Story</span>
+        <h2 class="ab-title" data-reveal>Hi, I’m Zay! 💜</h2>
+        <p class="ab-sub" data-reveal>A little hello from the maker behind every charm.</p>
 
-            if (music.paused) {
-                music.play();
-                btn.innerHTML = "🔇 Stop Music";
-            } else {
-                music.pause();
-                btn.innerHTML = "🎵 Play Music";
-            }
+        <div class="ab-story">
 
-        };
-    </script>
-    <!-- ================= FOOTER ================= -->
+            <div class="ab-story-card" data-reveal>
 
-<footer class="footer">
+                <h3>The little creator behind the charms</h3>
+
+                <p>
+                    <b>Charms by Zayys</b> is my little collection of handmade cuties.
+                    I’m someone who finds happiness in cute things, pretty colors, tiny details,
+                    and making things with my own hands. 🌷🎀
+                </p>
+
+                <p>
+                    I love creating little pieces that feel <b>happy, cozy, and a little bit magical.</b> ✨
+                    I put lots of love, patience, and a tiny piece of my heart into everything I make. 💕
+                </p>
+
+                <p>
+                    From pretty jewelry to squishy soft toys and cozy crochet creations,
+                    everything here is made to bring a little extra cuteness into your day.
+                </p>
+
+            </div>
+
+            <div class="ab-quote" data-reveal>
+
+                <span class="ab-float sm" style="top:14%;left:12%;--delay:.4s">✨</span>
+                <span class="ab-float sm" style="bottom:16%;right:14%;--delay:1.6s">💗</span>
+
+                <div class="big">💜</div>
+                <q>Tiny Charms, Endless Smiles</q>
+                <small>handmade with love ✨</small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= 3. OUR LITTLE WORLD ================= -->
+
+    <section class="ab-section" id="our-little-world">
+
+        <span class="ab-eyebrow" data-reveal>Our Little World</span>
+        <h2 class="ab-title" data-reveal>Cute, Cozy &amp; a Little Bit Magical</h2>
+        <p class="ab-sub" data-reveal>
+            Pretty colors, tiny details and lots of heart. Here’s a peek at everything
+            you’ll find in my little corner of the internet.
+        </p>
+
+        <div class="ab-world-grid">
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">💎</div>
+                <h3>Jewelry</h3>
+                <p>Pretty little pieces for your everyday sparkle.</p>
+            </div>
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">🌸</div>
+                <h3>Cold Porcelain Charms</h3>
+                <p>Tiny handmade cuties made with love.</p>
+            </div>
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">🧸</div>
+                <h3>Soft Toys</h3>
+                <p>Squishy little friends to brighten your day.</p>
+            </div>
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">🌷</div>
+                <h3>Crochet Bouquets</h3>
+                <p>Cute flowers made to stay forever.</p>
+            </div>
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">🧶</div>
+                <h3>Crochet Creations</h3>
+                <p>Cozy little handmade treasures.</p>
+            </div>
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">📱</div>
+                <h3>Phone Charms</h3>
+                <p>Tiny cuties for your favorite things.</p>
+            </div>
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">👜</div>
+                <h3>Bag Charms</h3>
+                <p>Because bags deserve a little cuteness too!</p>
+            </div>
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">🔑</div>
+                <h3>Keychains</h3>
+                <p>Little buddies you can take everywhere.</p>
+            </div>
+
+            <div class="ab-world-card" data-reveal>
+                <div class="ab-icon">🎁</div>
+                <h3>Gift Boxes</h3>
+                <p>A bundle of little happy things for someone special.</p>
+            </div>
+
+        </div>
+
+        <div class="ab-soon" data-reveal>
+            <span class="ab-float sm" style="top:18%;left:6%;--delay:.5s">✨</span>
+            <span class="ab-float sm" style="bottom:18%;right:7%;--delay:1.5s">💕</span>
+            And who knows… there might be lots more cute things coming soon! 👀🎀
+        </div>
+
+    </section>
+
+    <!-- ================= 4. WHAT MAKES US SPECIAL ================= -->
+
+    <section class="ab-section" id="what-makes-us-special">
+
+        <span class="ab-eyebrow" data-reveal>What Makes Us Special</span>
+        <h2 class="ab-title" data-reveal>Little Things, Made Special</h2>
+        <p class="ab-sub" data-reveal>The heart of Charms by Zayys, in a few cute words.</p>
+
+        <div class="ab-feature-grid">
+
+            <div class="ab-feature" data-reveal>
+                <div class="ab-icon">🤲</div>
+                <h3>Made With My Own Hands</h3>
+                <p>I love making things with my own hands, and every piece in my little collection is handmade.</p>
+            </div>
+
+            <div class="ab-feature" data-reveal>
+                <div class="ab-icon">💕</div>
+                <h3>Love &amp; Patience</h3>
+                <p>Lots of love, patience, and a tiny piece of my heart go into everything I make.</p>
+            </div>
+
+            <div class="ab-feature" data-reveal>
+                <div class="ab-icon">🎀</div>
+                <h3>Happy, Cozy &amp; Magical</h3>
+                <p>Pretty colors and tiny details come together to feel happy, cozy, and a little bit magical.</p>
+            </div>
+
+            <div class="ab-feature" data-reveal>
+                <div class="ab-icon">🚚</div>
+                <h3>Free Delivery</h3>
+                <p>Free delivery on orders above Rs.2000, so your favourite charms can find their way to you.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= 5. OUR PROMISE ================= -->
+
+    <section class="ab-section" id="our-promise">
+
+        <div class="ab-promise" data-reveal data-hearts>
+
+            <span class="ab-float md" style="top:8%;left:5%;--delay:.3s">💗</span>
+            <span class="ab-float sm" style="top:14%;right:8%;--delay:1.4s">✨</span>
+            <span class="ab-float sm" style="bottom:8%;left:10%;--delay:2.2s">✨</span>
+            <span class="ab-float md" style="bottom:10%;right:5%;--delay:.9s">💜</span>
+
+            <span class="ab-eyebrow">Our Promise</span>
+            <h2 class="ab-title">A Little Promise From My Heart to Yours</h2>
+            <p class="ab-sub">
+                Charms by Zayys is built on a few simple, honest things. Here’s what I
+                promise to keep at the heart of it all.
+            </p>
+
+            <div class="ab-promise-grid">
+
+                <div class="ab-promise-item">
+                    <div class="ab-icon">💜</div>
+                    <h3>Made With Love</h3>
+                    <p>Every piece is made with love, elegance, and a touch of magic.</p>
+                </div>
+
+                <div class="ab-promise-item">
+                    <div class="ab-icon">🌷</div>
+                    <h3>Made With Patience</h3>
+                    <p>Tiny details take patience, and I put plenty of it into everything I make.</p>
+                </div>
+
+                <div class="ab-promise-item">
+                    <div class="ab-icon">🥹</div>
+                    <h3>Made to Make You Smile</h3>
+                    <p>My biggest hope is that something here brings a smile to your face.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= 6. THANK YOU ================= -->
+
+    <section class="ab-thanks">
+
+        <div class="ab-thanks-card" data-reveal data-hearts>
+
+            <span class="ab-float lg" style="top:10%;left:6%;--delay:0s">💗</span>
+            <span class="ab-float sm" style="top:18%;right:10%;--delay:1s">✨</span>
+            <span class="ab-float md" style="bottom:12%;left:10%;--delay:2s">✨</span>
+            <span class="ab-float md" style="bottom:14%;right:7%;--delay:.7s">💜</span>
+
+            <h2>Thank You for Being Part of Our Little World</h2>
+
+            <p>
+                Thank you for visiting my little corner of the internet.
+                I hope something here makes you smile. 🥹💜✨
+            </p>
+
+            <div class="ab-thanks-actions">
+                <a href="shop.html" class="shop-btn">🛍️ Shop Now</a>
+                <a href="index.html" class="explore-btn">🏠 Back to Home</a>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<audio id="bg-music" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    /* ---- Background music (same feature as before) ---- */
+    const music = document.getElementById("bg-music");
+    const btn = document.getElementById("music-btn");
+
+    btn.onclick = function () {
+        if (music.paused) {
+            const p = music.play();
+            if (p && p.catch) { p.catch(function () {}); }
+            btn.innerHTML = "🔇 Stop Music";
+        } else {
+            music.pause();
+            btn.innerHTML = "🎵 Play Music";
+        }
+    };
+</script>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer" data-hearts>
 
     <div class="footer-container">
 
@@ -199,6 +539,8 @@
 </footer>
 
 <script src="effects.js" defer></script>
+<script type="module" src="script.js"></script>
+<script type="module" src="auth.js"></script>
 
 </body>
 </html>
