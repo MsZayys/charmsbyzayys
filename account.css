@@ -1,203 +1,159 @@
-/* ================= ACCOUNT PAGE ================= */
+/* =====================================================
+   ACCOUNT PAGE — dreamy pink & lavender redesign
+   ===================================================== */
 
 .account-page{
-
+    position:relative;
+    z-index:1;
     min-height:100vh;
-
-    background:#FFF8FC;
-
+    background:transparent;
     padding:60px 20px;
-
 }
 
 .profile-card{
-
     width:420px;
-
     max-width:100%;
-
     margin:auto;
-
-    background:white;
-
-    border-radius:25px;
-
+    background:linear-gradient(170deg,#fff,var(--baby));
+    border-radius:var(--radius-lg);
     overflow:hidden;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-
+    box-shadow:var(--shadow-lg);
     text-align:center;
-
+    animation:slideUp .8s var(--ease) both;
 }
 
 .profile-cover{
-
+    position:relative;
     height:150px;
+    background:
+        radial-gradient(circle at 20% 30%,rgba(255,255,255,.7),transparent 45%),
+        linear-gradient(135deg,var(--blush),#EBD3EF 55%,var(--lavender));
+}
 
-    background:linear-gradient(
-        135deg,
-        #F8E8F4,
-        #EFD9EA,
-        #DDBDD6
-    );
+.profile-cover::before,
+.profile-cover::after{
+    content:"✨";
+    position:absolute;
+    font-size:24px;
+    animation:floatSparkle 5s ease-in-out infinite;
+}
 
+.profile-cover::before{
+    top:22px;
+    left:28px;
+}
+
+.profile-cover::after{
+    content:"💖";
+    top:40px;
+    right:34px;
+    animation-delay:1.6s;
 }
 
 .profile-avatar{
-
     width:110px;
-
     height:110px;
-
     margin:-55px auto 20px;
-
     border-radius:50%;
-
-    background:#8B5E83;
-
+    background:var(--grad-btn);
     color:white;
-
     font-size:40px;
-
     font-weight:700;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     border:6px solid white;
-
+    box-shadow:var(--shadow-md);
+    position:relative;
 }
 
 .profile-card h2{
-
     margin-bottom:10px;
-
-    color:#333;
-
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    color:var(--mauve);
 }
 
 .profile-card p{
-
-    color:#777;
-
+    color:var(--text-soft);
     margin-bottom:35px;
-
 }
+
 /* ===== Edit Profile Button ===== */
 
 .edit-btn{
-
     margin-bottom:35px;
-
     padding:12px 28px;
-
     border:none;
-
     border-radius:50px;
-
-    background:#8B5E83;
-
+    background:var(--grad-btn);
     color:white;
-
     font-size:15px;
-
     font-weight:500;
-
     cursor:pointer;
-
-    transition:.3s;
-
+    box-shadow:0 8px 18px rgba(155,113,143,.28);
+    transition:transform .3s var(--ease),box-shadow .3s;
 }
 
 .edit-btn:hover{
-
-    background:#734C6D;
-
     transform:translateY(-2px);
-
+    box-shadow:0 14px 26px rgba(155,113,143,.38);
 }
+
 /* ================= ACCOUNT MENU ================= */
 
 .account-menu{
-
     width:420px;
     max-width:100%;
-
     margin:25px auto;
-
     background:#fff;
-
-    border-radius:25px;
-
+    border-radius:var(--radius-lg);
     overflow:hidden;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-
+    box-shadow:var(--shadow-md);
+    animation:slideUp .8s .15s var(--ease) both;
 }
 
 .menu-item{
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     padding:20px 25px;
-
     text-decoration:none;
-
-    color:#333;
-
-    transition:.3s;
-
-    border-bottom:1px solid #F4F4F4;
-
+    color:var(--text);
+    transition:background .3s,padding-left .3s var(--ease);
+    border-bottom:1px solid var(--lilac);
 }
 
 .menu-item:last-child{
-
     border-bottom:none;
-
 }
 
 .menu-item:hover{
-
-    background:#FFF4FA;
-
+    background:var(--baby);
+    padding-left:31px;
 }
 
 .menu-item span{
-
     flex:1;
-
     margin-left:18px;
-
     font-size:16px;
-
     font-weight:500;
-
 }
 
 .menu-item i:first-child{
-
-    color:#8B5E83;
-
+    color:var(--mauve);
     font-size:20px;
-
     width:24px;
-
     text-align:center;
-
 }
 
 .menu-item i:last-child{
-
-    color:#B8B8B8;
-
+    color:#C9B3C4;
     font-size:14px;
+    transition:transform .3s var(--ease),color .3s;
+}
 
+.menu-item:hover i:last-child{
+    color:var(--mauve);
+    transform:translateX(4px);
 }

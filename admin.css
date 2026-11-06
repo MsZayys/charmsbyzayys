@@ -1,32 +1,64 @@
+/* =====================================================
+   ADMIN PANEL — dreamy pink & lavender redesign
+   (padding moved from <body> to the container so the
+   footer can span the full width)
+   ===================================================== */
+
 body{
     margin:0;
-    padding:30px;
+    padding:0;
     font-family:'Poppins',sans-serif;
-    background:#FBEFEF;
 }
 
 .admin-container{
+    position:relative;
+    z-index:1;
     max-width:1200px;
     margin:auto;
+    padding:40px 20px 10px;
 }
 
 .admin-container h1{
     text-align:center;
-    color:#7d5a83;
+    font-family:'Cormorant Garamond',serif;
+    font-size:46px;
+    color:var(--mauve);
     margin-bottom:40px;
 }
+
+.admin-container h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    color:var(--mauve);
+}
+
+.admin-container hr{
+    border:none;
+    height:2px;
+    background:linear-gradient(90deg,transparent,#E3CBE9,transparent);
+}
+
+/* ================= ORDERS ================= */
 
 #orders-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:25px;
+    margin-top:25px;
 }
 
 .order-card{
-    background:#fff;
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    background:linear-gradient(160deg,#fff,var(--baby));
+    border:1px solid rgba(255,255,255,.95);
+    border-radius:var(--radius-md);
+    padding:22px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .4s var(--ease),box-shadow .4s;
+}
+
+.order-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-md);
 }
 
 .order-card img{
@@ -38,13 +70,15 @@ body{
 }
 
 .order-card h3{
-    color:#7d5a83;
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;
+    color:var(--mauve);
     margin-bottom:10px;
 }
 
 .order-card p{
     margin:8px 0;
-    color:#555;
+    color:var(--text);
 }
 
 .status{
@@ -55,6 +89,35 @@ body{
     background:#FFF4C2;
     color:#9A6B00;
     font-weight:600;
+}
+
+/* Status buttons created by admin.js */
+
+.status-btn{
+    border:none;
+    padding:11px 18px;
+    margin:0 8px 8px 0;
+    border-radius:30px;
+    color:#fff;
+    font-weight:600;
+    font-size:14px;
+    font-family:'Poppins',sans-serif;
+    cursor:pointer;
+    transition:transform .3s var(--ease),box-shadow .3s,filter .3s;
+}
+
+.status-btn:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.06);
+    box-shadow:0 10px 20px rgba(155,113,143,.3);
+}
+
+.shipped-btn{
+    background:var(--grad-btn);
+}
+
+.delivered-btn{
+    background:linear-gradient(135deg,#5BBF93,#3FA37A);
 }
 
 .btn-group{
@@ -68,179 +131,179 @@ body{
     flex:1;
     border:none;
     padding:12px;
-    border-radius:10px;
+    border-radius:30px;
     cursor:pointer;
     font-weight:600;
     transition:.3s;
 }
 
 .ship-btn{
-    background:#7d5a83;
+    background:var(--grad-btn);
     color:white;
 }
 
 .ship-btn:hover{
-    background:#65486a;
+    filter:brightness(1.08);
 }
 
 .deliver-btn{
-    background:#46b96d;
+    background:linear-gradient(135deg,#5BBF93,#3FA37A);
     color:white;
 }
 
 .deliver-btn:hover{
-    background:#359658;
+    filter:brightness(1.08);
 }
 
 .delete-btn{
-    background:#e74c3c;
+    background:#E8708A;
     color:white;
 }
 
 .delete-btn:hover{
-    background:#c0392b;
+    background:#D6566F;
 }
-/* ================= ADD PRODUCT ================= */
 
-.add-product{
+/* ================= ADD / EDIT PRODUCT ================= */
 
-    background:#fff;
-
+.add-product,
+#edit-product-box{
+    background:linear-gradient(160deg,#fff,var(--baby));
     padding:30px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
+    border-radius:var(--radius-md);
+    box-shadow:var(--shadow-md);
     margin-bottom:40px;
-
 }
 
-.add-product h2{
-
+.add-product h2,
+#edit-product-box h2{
     text-align:center;
-
-    color:#7d5a83;
-
     margin-bottom:25px;
-
 }
 
 .add-product input,
-.add-product textarea{
-
+.add-product textarea,
+.add-product select,
+#edit-product-form input,
+#edit-product-form textarea,
+#edit-product-form select{
     width:100%;
-
     padding:14px 18px;
-
     margin-bottom:16px;
-
-    border:1px solid #e7d7e4;
-
-    border-radius:12px;
-
+    border:1.5px solid #EADBF3;
+    border-radius:14px;
+    background:#fff;
+    color:var(--text);
     font-size:16px;
-
     font-family:Poppins,sans-serif;
-
     outline:none;
-
-    transition:.3s;
-
+    transition:border-color .3s,box-shadow .3s;
     box-sizing:border-box;
-
 }
 
 .add-product input:focus,
-.add-product textarea:focus{
-
-    border-color:#c89cc5;
-
+.add-product textarea:focus,
+.add-product select:focus,
+#edit-product-form input:focus,
+#edit-product-form textarea:focus,
+#edit-product-form select:focus{
+    border-color:var(--mauve);
+    box-shadow:0 0 0 4px rgba(155,113,143,.16);
 }
 
-.add-product textarea{
-
+.add-product textarea,
+#edit-product-form textarea{
     min-height:120px;
-
     resize:vertical;
-
 }
 
-#add-product-btn{
-
+#add-product-btn,
+#edit-product-form button{
     width:100%;
-
     padding:15px;
-
-    background:#7d5a83;
-
+    background:var(--grad-btn);
     color:#fff;
-
     border:none;
-
-    border-radius:12px;
-
+    border-radius:30px;
     cursor:pointer;
-
     font-size:17px;
-
-    font-weight:600;
-
-    transition:.3s;
-
+    font-weight:500;
+    font-family:'Poppins',sans-serif;
+    box-shadow:0 10px 22px rgba(155,113,143,.3);
+    transition:transform .3s var(--ease),box-shadow .3s,filter .3s;
 }
 
-#add-product-btn:hover{
-
-    background:#68456d;
-
+#add-product-btn:hover,
+#edit-product-form button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 30px rgba(155,113,143,.4);
+    filter:brightness(1.05);
 }
+
 /* ================= MANAGE PRODUCTS ================= */
 
-#products-list {
-    margin-top: 25px;
+#products-list{
+    margin-top:25px;
 }
 
-.product-card-admin {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    background: #fff;
-    border-radius: 12px;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+.product-card-admin{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    background:linear-gradient(135deg,#fff,var(--baby));
+    border-radius:var(--radius-sm);
+    padding:15px 20px;
+    margin-bottom:15px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .35s var(--ease),box-shadow .35s;
 }
 
-.product-card-admin img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 10px;
+.product-card-admin:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-md);
 }
 
-.product-card-admin h3 {
-    margin: 0;
-    color: #7d5a83;
+.product-card-admin img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:12px;
 }
 
-.product-card-admin p {
-    margin: 4px 0;
-    color: #666;
+.product-card-admin h3{
+    margin:0;
+    color:var(--mauve);
 }
 
-.delete-product-btn {
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: 0.3s;
+.product-card-admin p{
+    margin:4px 0;
+    color:var(--text-soft);
 }
 
-.delete-product-btn:hover {
-    background: #d63031;
+.delete-product-btn{
+    background:#E8708A;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    transition:background .3s,transform .3s var(--ease);
+}
+
+.delete-product-btn:hover{
+    background:#D6566F;
+    transform:translateY(-2px);
+}
+
+@media (max-width:600px){
+
+    .admin-container h1{
+        font-size:34px;
+    }
+
+    .product-card-admin{
+        flex-wrap:wrap;
+    }
 }

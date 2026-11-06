@@ -5,6 +5,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F8DCE8">
     <link rel="icon" type="image/png" href="images/logo.png">
     <title>Charms by Zayys</title>
     <meta name="google-site-verification" content="OnHCbQAhIUicADMNYGKF__rCUXF8fQao4V-LiJeICq8" />
@@ -207,7 +208,7 @@ content="https://mszayys.github.io/charmsbyzayys/">
 
     <!-- ================= HERO SECTION ================= -->
 
-    <section class="hero">
+    <section class="hero" data-hearts>
 
         <div class="glow glow1"></div>
         <div class="glow glow2"></div>
@@ -247,7 +248,65 @@ content="https://mszayys.github.io/charmsbyzayys/">
 
         <div class="hero-image">
 
+            <span class="hero-badge b1">💜 Handmade with love</span>
+
             <img src="images/hero.png" alt="Charms by Zayys">
+
+            <span class="hero-badge b2">✨ Tiny charms</span>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RIBBON ================= -->
+
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>💜 Handmade with Love</span>
+            <span>✨ Tiny Charms, Endless Smiles</span>
+            <span>🚚 Free Delivery on Orders Above Rs.2000</span>
+            <span>💖 Bracelets &amp; Charm Jewelry</span>
+            <span>💜 Handmade with Love</span>
+            <span>✨ Tiny Charms, Endless Smiles</span>
+            <span>🚚 Free Delivery on Orders Above Rs.2000</span>
+            <span>💖 Bracelets &amp; Charm Jewelry</span>
+        </div>
+    </div>
+
+    <!-- ================= SHOP BY COLLECTION ================= -->
+
+    <section class="collections">
+
+        <h2 class="section-title">
+            💖 Find Your Charm 💖
+        </h2>
+
+        <p class="section-sub">
+            Bracelets, charm jewelry and little accessories, all handmade to celebrate your style.
+        </p>
+
+        <div class="collection-grid">
+
+            <a href="shop.html" class="collection-card">
+                <div class="collection-icon">💜</div>
+                <h3>Handmade Bracelets</h3>
+                <p>Delicate bracelets crafted with love, elegance and a touch of magic.</p>
+                <span class="link">Browse bracelets</span>
+            </a>
+
+            <a href="shop.html" class="collection-card">
+                <div class="collection-icon">✨</div>
+                <h3>Charm Jewelry</h3>
+                <p>Tiny charms that turn every outfit into something a little more special.</p>
+                <span class="link">Browse charms</span>
+            </a>
+
+            <a href="shop.html" class="collection-card">
+                <div class="collection-icon">🎀</div>
+                <h3>Elegant Accessories</h3>
+                <p>Pretty finishing touches, made by hand for your everyday style.</p>
+                <span class="link">Browse accessories</span>
+            </a>
 
         </div>
 
@@ -268,7 +327,62 @@ content="https://mszayys.github.io/charmsbyzayys/">
    
   </div>
 
+  <div class="view-all">
+      <a href="shop.html" class="shop-btn">View All Products</a>
+  </div>
+
 </section>
+
+<!-- ================= PROMOTIONAL BANNERS ================= -->
+
+<section class="promos">
+
+    <div class="promo-grid">
+
+        <div class="promo-card pink" data-emoji="🚚" data-reveal>
+            <h3>Free delivery on orders above Rs.2000</h3>
+            <p>Pick your favourite charms and let us bring them to your door.</p>
+            <a href="shop.html" class="promo-link">Start shopping</a>
+        </div>
+
+        <div class="promo-card lilac" data-emoji="💜" data-reveal>
+            <h3>Handmade with love</h3>
+            <p>Every piece is made with love, elegance, and a touch of magic.</p>
+            <a href="about.html" class="promo-link">Our story</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <div class="newsletter-card" data-hearts data-reveal>
+
+        <h2>Sprinkle a little magic in your inbox ✨</h2>
+
+        <p>
+            Join our list for new charms and news from Charms by Zayys.
+        </p>
+
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+
+            <input type="email" id="newsletter-email"
+                   placeholder="Your email address"
+                   aria-label="Email address" autocomplete="email">
+
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+
+        </form>
+
+        <p class="newsletter-note" id="newsletter-note" aria-live="polite"></p>
+
+    </div>
+
+</section>
+
 <!-- ================= PRODUCT POPUP ================= -->
 
 <div class="product-popup" id="productPopup">
@@ -320,7 +434,7 @@ content="https://mszayys.github.io/charmsbyzayys/">
 </div>
 <!-- ================= FOOTER ================= -->
 
-<footer class="footer">
+<footer class="footer" data-hearts>
 
     <div class="footer-container">
 
@@ -384,6 +498,7 @@ content="https://mszayys.github.io/charmsbyzayys/">
 </footer>
 
 
+<script src="effects.js" defer></script>
 <script type="module" src="script.js"></script>
 <script type="module" src="auth.js"></script>
 

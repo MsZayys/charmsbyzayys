@@ -1,32 +1,41 @@
-/* ================= SAVED ADDRESS PAGE ================= */
+/* =====================================================
+   SAVED ADDRESS PAGE — dreamy pink & lavender redesign
+   ===================================================== */
 
 .saved-address-page{
+    position:relative;
+    z-index:1;
     min-height:100vh;
-    background:#FFF8FC;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:40px 20px;
+    padding:50px 20px;
+    background:
+        radial-gradient(circle at 15% 15%,rgba(255,255,255,.8),transparent 40%),
+        var(--grad-dreamy);
 }
 
 .address-container{
     width:100%;
     max-width:500px;
-    background:#fff;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    background:rgba(255,252,250,.92);
+    padding:40px 36px;
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-lg);
+    animation:slideUp .8s var(--ease) both;
 }
 
 .address-container h1{
     text-align:center;
-    color:#7d5a83;
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    color:var(--mauve);
     margin-bottom:10px;
 }
 
 .address-container p{
     text-align:center;
-    color:#777;
+    color:var(--text-soft);
     margin-bottom:30px;
 }
 
@@ -38,16 +47,17 @@
 
 #addressForm input,
 #addressForm textarea{
-
     width:100%;
-    padding:14px 16px;
-    border:1px solid #ddd;
-    border-radius:12px;
+    padding:14px 18px;
+    border:1.5px solid #EADBF3;
+    border-radius:14px;
+    background:#fff;
+    color:var(--text);
     font-size:15px;
+    font-family:'Poppins',sans-serif;
     outline:none;
-    transition:.3s;
+    transition:border-color .3s,box-shadow .3s;
     box-sizing:border-box;
-
 }
 
 #addressForm textarea{
@@ -57,27 +67,39 @@
 
 #addressForm input:focus,
 #addressForm textarea:focus{
-
-    border-color:#7d5a83;
-
+    border-color:var(--mauve);
+    box-shadow:0 0 0 4px rgba(155,113,143,.16);
 }
 
 #addressForm button{
-
+    position:relative;
+    overflow:hidden;
     padding:14px;
     border:none;
-    border-radius:12px;
-    background:#7d5a83;
+    border-radius:30px;
+    background:var(--grad-btn);
     color:#fff;
     font-size:16px;
-    font-weight:600;
+    font-weight:500;
+    font-family:'Poppins',sans-serif;
     cursor:pointer;
-    transition:.3s;
-
+    box-shadow:0 10px 22px rgba(155,113,143,.3);
+    transition:transform .3s var(--ease),box-shadow .3s,filter .3s;
 }
 
 #addressForm button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 30px rgba(155,113,143,.4);
+    filter:brightness(1.05);
+}
 
-    background:#69486f;
+@media (max-width:600px){
 
+    .address-container{
+        padding:32px 22px;
+    }
+
+    .address-container h1{
+        font-size:34px;
+    }
 }
